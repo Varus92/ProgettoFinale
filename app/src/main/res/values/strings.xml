@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DemoDao</string>
+    <string name="inseri_email">inseri_email</string>
+    <string name="inserisci_cognome">inserisci_cognome</string>
+    <string name="inserisci_password">inserisci_password</string>
+    <string name="inserisci_nome">inserisci_nome</string>
+    <string name="button">Button</string>
+</resources>
