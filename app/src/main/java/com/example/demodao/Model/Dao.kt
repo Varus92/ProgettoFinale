@@ -18,7 +18,7 @@ interface DaoUser {
     suspend fun getAllPassword(): List<String>
 
 
-//    @Query("SELECT * FROM user WHERE email = :email")
+//  @Query("SELECT * FROM user WHERE email = :email")
 //    suspend fun checkEmail(email: String): Boolean
 
 //

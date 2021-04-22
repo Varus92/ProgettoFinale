@@ -71,21 +71,18 @@ button.setOnClickListener {
         val email: List<String> = db.userDao().getAllEmail()
         val password: List<String> =db.userDao().getAllPassword()
 
+//        val fiddd = db.userDao().checkEmail(input0)
+//        Log.d("P",fiddd.toString())
+
         val ema = email.indexOf(input0)
         Log.d("P",ema.toString())
         val pas = password.indexOf(input1)
         Log.d("P",pas.toString())
 
-        if(ema == pas ) {
-
-            Log.d("P","corretto")
-           // Toast.makeText(this@MainActivity, "Trovato", Toast.LENGTH_SHORT).show()
-
-        }else {
-            Log.d("V","Non corretto")
-
-            //  Toast.makeText(this@MainActivity, "Errato", Toast.LENGTH_SHORT).show()
-
+        when{
+            ema == pas && ema!=-1 ->Log.d("P","corretto")
+            ema==-1 -> Log.d("P","Email non corretta")
+            else -> Log.d("P","Password non corretta")
         }
 
     }
