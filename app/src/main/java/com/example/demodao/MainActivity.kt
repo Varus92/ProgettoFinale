@@ -68,8 +68,8 @@ class MainActivity : AppCompatActivity() {
                     Log.d("P", pas.toString())
 
                     when {
-                        ema == pas && ema != -1 -> Log.d("P", "corretto")
-                        ema == -1 -> Log.d("P", "Email non corretta")
+                        db.userDao().checkPassword(input0,input1) -> Log.d("P", "corretto")
+                        !db.userDao().checkEmail(input0) -> Log.d("P", "Email non corretta")
                         else -> Log.d("P", "Password non corretta")
                     }
 

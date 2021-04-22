@@ -18,12 +18,12 @@ interface DaoUser {
     suspend fun getAllPassword(): List<String>
 
 
-//  @Query("SELECT * FROM user WHERE email = :email")
-//    suspend fun checkEmail(email: String): Boolean
+    @Query("SELECT * FROM user WHERE email IN (:email)")
+    fun checkEmail(email: String): Boolean
 
-//
-//    @Query("SELECT * FROM user WHERE email =:email AND password = :password")
-//    suspend fun checkPassword(email: String, password: String): Boolean
+
+    @Query("SELECT * FROM user WHERE email IN (:email) AND password IN(:password)")
+   fun checkPassword(email: String, password: String): Boolean
 //
 //    @Query("SELECT idUser FROM user WHERE email =:email")
 //    suspend fun returnID(email: String): Int
